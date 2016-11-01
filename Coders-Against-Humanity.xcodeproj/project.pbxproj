@@ -14,6 +14,8 @@
 		B410A8C81DC8FEB200FEB7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410A8C61DC8FEB200FEB7AA /* LaunchScreen.storyboard */; };
 		B410A8D31DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8D21DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift */; };
 		B410A8DE1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8DD1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift */; };
+		B49840DD1DC93D7200F5E167 /* VoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49840DC1DC93D7200F5E167 /* VoteVC.swift */; };
+		B4E40EE91DC9563B00671DB1 /* WinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */; };
 		D8247E0C1DC92C230012B2D5 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8247E0B1DC92C230012B2D5 /* GameVC.swift */; };
 		D88648681DC9295D007EC9B1 /* InstructionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88648671DC9295D007EC9B1 /* InstructionVC.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		B410A8D91DC8FEB200FEB7AA /* Coders-Against-HumanityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coders-Against-HumanityUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B410A8DD1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coders_Against_HumanityUITests.swift; sourceTree = "<group>"; };
 		B410A8DF1DC8FEB200FEB7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49840DC1DC93D7200F5E167 /* VoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteVC.swift; sourceTree = "<group>"; };
+		B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerVC.swift; sourceTree = "<group>"; };
 		D8247E0B1DC92C230012B2D5 /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		D88648671DC9295D007EC9B1 /* InstructionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B410A8BD1DC8FEB200FEB7AA /* AppDelegate.swift */,
+				B49840DC1DC93D7200F5E167 /* VoteVC.swift */,
 				D88648671DC9295D007EC9B1 /* InstructionVC.swift */,
 				B410A8BF1DC8FEB200FEB7AA /* LoginVC.swift */,
 				B410A8C11DC8FEB200FEB7AA /* Main.storyboard */,
@@ -109,6 +114,7 @@
 				B410A8C61DC8FEB200FEB7AA /* LaunchScreen.storyboard */,
 				B410A8C91DC8FEB200FEB7AA /* Info.plist */,
 				D8247E0B1DC92C230012B2D5 /* GameVC.swift */,
+				B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */,
 			);
 			path = "Coders-Against-Humanity";
 			sourceTree = "<group>";
@@ -266,9 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B410A8C01DC8FEB200FEB7AA /* LoginVC.swift in Sources */,
+				B49840DD1DC93D7200F5E167 /* VoteVC.swift in Sources */,
 				D88648681DC9295D007EC9B1 /* InstructionVC.swift in Sources */,
 				D8247E0C1DC92C230012B2D5 /* GameVC.swift in Sources */,
 				B410A8BE1DC8FEB200FEB7AA /* AppDelegate.swift in Sources */,
+				B4E40EE91DC9563B00671DB1 /* WinnerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
