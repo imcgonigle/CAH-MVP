@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Coders-Against-Humanity
 //
-//  Created by Ji Kim on 11/1/16.
-//  Copyright © 2016 Ji. All rights reserved.
+//  Created by ThunderWhatever on 11/1/16.
+//  Copyright © 2016 ThunderWhatever. All rights reserved.
 //
 
 import UIKit
