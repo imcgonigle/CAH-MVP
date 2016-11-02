@@ -44,6 +44,10 @@
 		D817D9BA1DCA231D00DF681E /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817D9B91DCA231D00DF681E /* SocketIOManager.swift */; };
 		D8247E0C1DC92C230012B2D5 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8247E0B1DC92C230012B2D5 /* GameVC.swift */; };
 		D88648681DC9295D007EC9B1 /* InstructionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88648671DC9295D007EC9B1 /* InstructionVC.swift */; };
+		E500086158495CB9396E0CB8 /* Pods_Coders_Against_HumanityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F5B7F691C305A28B08B19B /* Pods_Coders_Against_HumanityUITests.framework */; };
+		F2D5556ECA0E42BA595A963A /* Pods_Coders_Against_HumanityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B47D486E0670BACEDE9B816 /* Pods_Coders_Against_HumanityTests.framework */; };
+		F7211DB81DCA7674006AF5F4 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7211DB71DCA7674006AF5F4 /* CardController.swift */; };
+		F97C1AFE8E5FD94BF1D2A0EF /* Pods_Coders_Against_Humanity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF40225908DA90E6E4B6EA3 /* Pods_Coders_Against_Humanity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CEF8A2B855C96E0E62380A3 /* Pods-Coders-Against-HumanityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-HumanityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-HumanityTests/Pods-Coders-Against-HumanityTests.release.xcconfig"; sourceTree = "<group>"; };
+		1490D891F452F0713EACFCEF /* Pods-Coders-Against-HumanityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-HumanityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-HumanityUITests/Pods-Coders-Against-HumanityUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18FE96CAD8424E1D45DB6C99 /* Pods-Coders-Against-Humanity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-Humanity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-Humanity/Pods-Coders-Against-Humanity.debug.xcconfig"; sourceTree = "<group>"; };
+		4B47D486E0670BACEDE9B816 /* Pods_Coders_Against_HumanityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coders_Against_HumanityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF40225908DA90E6E4B6EA3 /* Pods_Coders_Against_Humanity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coders_Against_Humanity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73F5B7F691C305A28B08B19B /* Pods_Coders_Against_HumanityUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coders_Against_HumanityUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B410A8BA1DC8FEB200FEB7AA /* Coders-Against-Humanity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coders-Against-Humanity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B410A8BD1DC8FEB200FEB7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B410A8BF1DC8FEB200FEB7AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -80,6 +90,7 @@
 		B49840DC1DC93D7200F5E167 /* VoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteVC.swift; sourceTree = "<group>"; };
 		B4B40BD11DCA70890027E434 /* WaitingRoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingRoomVC.swift; path = ../Source/WaitingRoomVC.swift; sourceTree = "<group>"; };
 		B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerVC.swift; sourceTree = "<group>"; };
+		C8B5B9A9660AAE93073D38A0 /* Pods-Coders-Against-Humanity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-Humanity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-Humanity/Pods-Coders-Against-Humanity.release.xcconfig"; sourceTree = "<group>"; };
 		D817D9891DCA22FD00DF681E /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
 		D817D98A1DCA22FD00DF681E /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
 		D817D98B1DCA22FD00DF681E /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
@@ -107,6 +118,9 @@
 		D817D9B91DCA231D00DF681E /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		D8247E0B1DC92C230012B2D5 /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		D88648671DC9295D007EC9B1 /* InstructionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionVC.swift; sourceTree = "<group>"; };
+		E5208F0017E0996190B74C8B /* Pods-Coders-Against-HumanityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-HumanityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-HumanityTests/Pods-Coders-Against-HumanityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F33D728D090EBF40FDFD7D95 /* Pods-Coders-Against-HumanityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coders-Against-HumanityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coders-Against-HumanityUITests/Pods-Coders-Against-HumanityUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7211DB71DCA7674006AF5F4 /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97C1AFE8E5FD94BF1D2A0EF /* Pods_Coders_Against_Humanity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D5556ECA0E42BA595A963A /* Pods_Coders_Against_HumanityTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +144,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E500086158495CB9396E0CB8 /* Pods_Coders_Against_HumanityUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EC67EF3BEFA6A40CF633735 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18FE96CAD8424E1D45DB6C99 /* Pods-Coders-Against-Humanity.debug.xcconfig */,
+				C8B5B9A9660AAE93073D38A0 /* Pods-Coders-Against-Humanity.release.xcconfig */,
+				E5208F0017E0996190B74C8B /* Pods-Coders-Against-HumanityTests.debug.xcconfig */,
+				0CEF8A2B855C96E0E62380A3 /* Pods-Coders-Against-HumanityTests.release.xcconfig */,
+				1490D891F452F0713EACFCEF /* Pods-Coders-Against-HumanityUITests.debug.xcconfig */,
+				F33D728D090EBF40FDFD7D95 /* Pods-Coders-Against-HumanityUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48E422C8281C60D6D9DAB51C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FF40225908DA90E6E4B6EA3 /* Pods_Coders_Against_Humanity.framework */,
+				4B47D486E0670BACEDE9B816 /* Pods_Coders_Against_HumanityTests.framework */,
+				73F5B7F691C305A28B08B19B /* Pods_Coders_Against_HumanityUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B410A8B11DC8FEB200FEB7AA = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +182,8 @@
 				B410A8D11DC8FEB200FEB7AA /* Coders-Against-HumanityTests */,
 				B410A8DC1DC8FEB200FEB7AA /* Coders-Against-HumanityUITests */,
 				B410A8BB1DC8FEB200FEB7AA /* Products */,
+				0EC67EF3BEFA6A40CF633735 /* Pods */,
+				48E422C8281C60D6D9DAB51C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +200,7 @@
 		B410A8BC1DC8FEB200FEB7AA /* Coders-Against-Humanity */ = {
 			isa = PBXGroup;
 			children = (
+				F7211DB61DCA765D006AF5F4 /* Controllers */,
 				B410A8BD1DC8FEB200FEB7AA /* AppDelegate.swift */,
 				D817D9B91DCA231D00DF681E /* SocketIOManager.swift */,
 				B49840DC1DC93D7200F5E167 /* VoteVC.swift */,
@@ -223,6 +266,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		F7211DB61DCA765D006AF5F4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7211DB71DCA7674006AF5F4 /* CardController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B410A8E21DC8FEB200FEB7AA /* Build configuration list for PBXNativeTarget "Coders-Against-Humanity" */;
 			buildPhases = (
+				9EB860D8F6FFA27FAEA08780 /* [CP] Check Pods Manifest.lock */,
 				B410A8B61DC8FEB200FEB7AA /* Sources */,
 				B410A8B71DC8FEB200FEB7AA /* Frameworks */,
 				B410A8B81DC8FEB200FEB7AA /* Resources */,
+				A7B9BA2056AB5BD7FCEBEE7D /* [CP] Embed Pods Frameworks */,
+				BA3BD549387EC193BAAA5102 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B410A8E51DC8FEB200FEB7AA /* Build configuration list for PBXNativeTarget "Coders-Against-HumanityTests" */;
 			buildPhases = (
+				7023EC5D72A0A31CDCDFE21F /* [CP] Check Pods Manifest.lock */,
 				B410A8CA1DC8FEB200FEB7AA /* Sources */,
 				B410A8CB1DC8FEB200FEB7AA /* Frameworks */,
 				B410A8CC1DC8FEB200FEB7AA /* Resources */,
+				A9E5F888D22CD0F7342F2480 /* [CP] Embed Pods Frameworks */,
+				F6B8B5BC27D9408426702EF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,9 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B410A8E81DC8FEB200FEB7AA /* Build configuration list for PBXNativeTarget "Coders-Against-HumanityUITests" */;
 			buildPhases = (
+				6BACF49158473863CB46729D /* [CP] Check Pods Manifest.lock */,
 				B410A8D51DC8FEB200FEB7AA /* Sources */,
 				B410A8D61DC8FEB200FEB7AA /* Frameworks */,
 				B410A8D71DC8FEB200FEB7AA /* Resources */,
+				60F65F66BAADA86D551D44E8 /* [CP] Embed Pods Frameworks */,
+				25426E517A56BEA7F38B8A8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,6 +412,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25426E517A56BEA7F38B8A8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-HumanityUITests/Pods-Coders-Against-HumanityUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F65F66BAADA86D551D44E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-HumanityUITests/Pods-Coders-Against-HumanityUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BACF49158473863CB46729D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7023EC5D72A0A31CDCDFE21F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EB860D8F6FFA27FAEA08780 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B9BA2056AB5BD7FCEBEE7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-Humanity/Pods-Coders-Against-Humanity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E5F888D22CD0F7342F2480 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-HumanityTests/Pods-Coders-Against-HumanityTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA3BD549387EC193BAAA5102 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-Humanity/Pods-Coders-Against-Humanity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B8B5BC27D9408426702EF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coders-Against-HumanityTests/Pods-Coders-Against-HumanityTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B410A8B61DC8FEB200FEB7AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -385,6 +583,7 @@
 				D817D9AC1DCA22FD00DF681E /* SocketExtensions.swift in Sources */,
 				D817D9A81DCA22FD00DF681E /* SocketEnginePollable.swift in Sources */,
 				D817D9AE1DCA22FD00DF681E /* SocketIOClientConfiguration.swift in Sources */,
+				F7211DB81DCA7674006AF5F4 /* CardController.swift in Sources */,
 				D817D9B41DCA22FD00DF681E /* SocketParsable.swift in Sources */,
 				D817D9AD1DCA22FD00DF681E /* SocketIOClient.swift in Sources */,
 				B410A8BE1DC8FEB200FEB7AA /* AppDelegate.swift in Sources */,
@@ -538,6 +737,7 @@
 		};
 		B410A8E31DC8FEB200FEB7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18FE96CAD8424E1D45DB6C99 /* Pods-Coders-Against-Humanity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -551,6 +751,7 @@
 		};
 		B410A8E41DC8FEB200FEB7AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8B5B9A9660AAE93073D38A0 /* Pods-Coders-Against-Humanity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -564,6 +765,7 @@
 		};
 		B410A8E61DC8FEB200FEB7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5208F0017E0996190B74C8B /* Pods-Coders-Against-HumanityTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -578,6 +780,7 @@
 		};
 		B410A8E71DC8FEB200FEB7AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CEF8A2B855C96E0E62380A3 /* Pods-Coders-Against-HumanityTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -592,6 +795,7 @@
 		};
 		B410A8E91DC8FEB200FEB7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1490D891F452F0713EACFCEF /* Pods-Coders-Against-HumanityUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Coders-Against-HumanityUITests/Info.plist";
@@ -605,6 +809,7 @@
 		};
 		B410A8EA1DC8FEB200FEB7AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F33D728D090EBF40FDFD7D95 /* Pods-Coders-Against-HumanityUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Coders-Against-HumanityUITests/Info.plist";
