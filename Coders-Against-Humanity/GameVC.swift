@@ -64,9 +64,9 @@ class GameVC: UIViewController {
     
     //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
      func Hicard1(_ sender: UIButton!) {
-        print(sender.tag)
-        pickedCardTag.text = "I am the picked card tag: \(sender.tag)"
-        pickedCardText.text = "I am the picked card tag: \(sender.currentTitle)"
+        let formattedtag = "\(sender.tag)"
+        pickedCardTag.text = formattedtag
+        pickedCardText.text = sender.currentTitle
         selectedWhiteCard = sender.currentTitle!
     }
 

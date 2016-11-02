@@ -19,7 +19,7 @@ class VoteVC: UIViewController {
     @IBOutlet weak var Player1Card: UIButton!
     @IBOutlet weak var displayP1vCount: UILabel!
     var player1CardContent : String!
-    var votesForPlayer1 = 0
+    var votesForPlayer1 = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
