@@ -45,7 +45,6 @@ class GameVC: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //FUNCTION: Generate Cards
@@ -57,6 +56,13 @@ class GameVC: UIViewController {
                 for: UIControlState.normal
             )
         }
+    }
+    
+    // FUNCTION: Send blackCard.text thru to VoteVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        NSLog("\(cards.blackCardContent)")
+        let voteVC : VoteVC = segue.destination as! VoteVC
+        voteVC.blackCardContent = cards.blackCardContent
     }
     
     //ACTION: Return to login page
