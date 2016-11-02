@@ -2,34 +2,33 @@
 //  GameVC.swift
 //  Coders-Against-Humanity
 //
-//  Created by Creighton Soukup on 11/1/16.
-//  Copyright © 2016 Ji. All rights reserved.
+//  Created by ThunderWhatever on 11/1/16.
+//  Copyright © 2016 ThunderWhatever. All rights
 //
 
 import UIKit
 
-//PROTOTYPE: card
-
+// PROTOTYPE: card
 struct Cards {
     var blackCardContent : String!
     var whiteCardsContent : [String]!
 }
 
+// CLASS: GAME VC
 class GameVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
     @IBOutlet var whiteCards: [UIButton]!
 
-    //Variable used withing view
-    var cards = [Cards]()
-   // var cardIndex = Int()
+    //VARIABLES: used within view
+    var cards = Cards()
     var selectedWhiteCard = String()
     
     
+    //TO DO: a function to capitalize white cards
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loading up black and white card decks
-        //need to write function to capitalize white cards
-        cards = [
+        //Injecting in black & white card text
+        cards =
             Cards(
                 blackCardContent:"America is hungry. America needs ______",
                 whiteCardsContent:[
@@ -41,10 +40,7 @@ class GameVC: UIViewController {
                     "Pictures of Boobs"
                 ]
             )
-        ]
-        
         dealCards()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,15 +50,12 @@ class GameVC: UIViewController {
     
     //FUNCTION: Generate Cards
     func dealCards () {
-        NSLog("\(cards.count)")
-        if cards.count > 0 {
-            blackCard.text = cards[0].blackCardContent
-            
-            for i in 0..<whiteCards.count{
-                whiteCards[i].setTitle(
-                    cards[0].whiteCardsContent[i],
-                    for: UIControlState.normal)
-            }
+        blackCard.text = cards.blackCardContent
+        for i in 0..<whiteCards.count{
+            whiteCards[i].setTitle(
+                cards.whiteCardsContent[i],
+                for: UIControlState.normal
+            )
         }
     }
     
@@ -70,16 +63,6 @@ class GameVC: UIViewController {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+// END OF CLASS: GameVC
 }
