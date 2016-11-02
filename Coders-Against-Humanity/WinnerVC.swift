@@ -9,9 +9,13 @@
 import UIKit
 
 class WinnerVC: UIViewController {
+    @IBOutlet weak var blackCard: UITextView!
+    
+    var blackCardContent = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        blackCard.text = blackCardContent
     }
 
     override func didReceiveMemoryWarning() {
