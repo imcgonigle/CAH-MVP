@@ -22,8 +22,8 @@ class WinnerVC: UIViewController {
         super.viewDidLoad()
         blackCard.text = blackCardContent
         whiteCard.text = whiteCardContent
-        let voteCountString = "\(voteCount)"
-        numOfVotes.text = voteCountString
+//        let voteCountString = "\(voteCount)"
+        numOfVotes.text = "\(voteCount)"
         
     }
 

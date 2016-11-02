@@ -15,6 +15,7 @@
 		B410A8D31DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8D21DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift */; };
 		B410A8DE1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8DD1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift */; };
 		B49840DD1DC93D7200F5E167 /* VoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49840DC1DC93D7200F5E167 /* VoteVC.swift */; };
+		B4B40BD21DCA70890027E434 /* WaitingRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B40BD11DCA70890027E434 /* WaitingRoomVC.swift */; };
 		B4E40EE91DC9563B00671DB1 /* WinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */; };
 		D817D9A11DCA22FD00DF681E /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817D9891DCA22FD00DF681E /* SocketAckEmitter.swift */; };
 		D817D9A21DCA22FD00DF681E /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817D98A1DCA22FD00DF681E /* SocketAckManager.swift */; };
@@ -77,6 +78,7 @@
 		B410A8DD1DC8FEB200FEB7AA /* Coders_Against_HumanityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coders_Against_HumanityUITests.swift; sourceTree = "<group>"; };
 		B410A8DF1DC8FEB200FEB7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49840DC1DC93D7200F5E167 /* VoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteVC.swift; sourceTree = "<group>"; };
+		B4B40BD11DCA70890027E434 /* WaitingRoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingRoomVC.swift; path = ../Source/WaitingRoomVC.swift; sourceTree = "<group>"; };
 		B4E40EE81DC9563B00671DB1 /* WinnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerVC.swift; sourceTree = "<group>"; };
 		D817D9891DCA22FD00DF681E /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
 		D817D98A1DCA22FD00DF681E /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				B49840DC1DC93D7200F5E167 /* VoteVC.swift */,
 				D88648671DC9295D007EC9B1 /* InstructionVC.swift */,
 				B410A8BF1DC8FEB200FEB7AA /* LoginVC.swift */,
+				B4B40BD11DCA70890027E434 /* WaitingRoomVC.swift */,
 				B410A8C11DC8FEB200FEB7AA /* Main.storyboard */,
 				B410A8C41DC8FEB200FEB7AA /* Assets.xcassets */,
 				B410A8C61DC8FEB200FEB7AA /* LaunchScreen.storyboard */,
@@ -377,6 +380,7 @@
 				D817D9B81DCA22FD00DF681E /* WebSocket.swift in Sources */,
 				D817D9B61DCA22FD00DF681E /* SocketTypes.swift in Sources */,
 				D817D9AB1DCA22FD00DF681E /* SocketEventHandler.swift in Sources */,
+				B4B40BD21DCA70890027E434 /* WaitingRoomVC.swift in Sources */,
 				D817D9AA1DCA22FD00DF681E /* SocketEngineWebsocket.swift in Sources */,
 				D817D9AC1DCA22FD00DF681E /* SocketExtensions.swift in Sources */,
 				D817D9A81DCA22FD00DF681E /* SocketEnginePollable.swift in Sources */,
