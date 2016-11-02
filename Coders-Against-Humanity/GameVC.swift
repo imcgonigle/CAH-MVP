@@ -22,7 +22,13 @@ class GameVC: UIViewController {
     //VARIABLES: used within view
     var cards = Cards()
     var selectedWhiteCard = String()
-
+    var blackCardsArray = [String]()
+    var whiteCardsArray = [String]()
+    var selectedBlackCard = String()
+    var selectedWhiteCards = [String]()
+    var blackCounter = Int()
+    var whiteCounter = Int()
+    
     //PLAYGROUNG VARIABLES
     // TEMP VARIABLES: to log results from button click
     @IBOutlet weak var pickedCardText: UILabel!
@@ -31,21 +37,20 @@ class GameVC: UIViewController {
     //TO DO: a function to capitalize white cards
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dealBlackCard()
+        dealWhiteCards()
+        
         //Injecting in black & white card text
-        cards =
+        cards = 
             Cards(
-                blackCardContent:"America is hungry. America needs ______",
-                whiteCardsContent:[
-                    "Vigorous Jazz Hands",
-                    "Flightless Bird",
-                    "Laying An Egg",
-                    "Same Sex Ice Dancing",
-                    "A Salty Surprise",
-                    "Pictures of Boobs"
-                ]
+                blackCardContent: selectedBlackCard,
+                whiteCardsContent: selectedWhiteCards
             )
         
         dealCards()
+        
+        print("IN GAME VC", blackCardsArray)
     }
 
     func dealCards () {
@@ -69,7 +74,23 @@ class GameVC: UIViewController {
         pickedCardText.text = "I am the picked card tag: \(sender.currentTitle)"
         selectedWhiteCard = sender.currentTitle!
     }
+    
+    func dealBlackCard() {
+        selectedBlackCard = blackCardsArray[blackCounter]
+        blackCounter += 1
+    }
 
+    func dealWhiteCards() {
+        var whiteCards = [String]()
+        
+        for _ in 0...6{
+            whiteCards.append(whiteCardsArray[whiteCounter])
+            whiteCounter += 1
+        }
+        
+        selectedWhiteCards = whiteCards
+        
+    }
     // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let voteVC : VoteVC = segue.destination as! VoteVC
@@ -85,6 +106,8 @@ class GameVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
     
 // END OF CLASS: GameVC
 }
