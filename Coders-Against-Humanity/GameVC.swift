@@ -19,19 +19,14 @@ class GameVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
     @IBOutlet var whiteCards: [UIButton]!
     
-    @IBOutlet weak var originalTag: UILabel!
-    @IBOutlet weak var tagInfo: UILabel!
-    @IBOutlet weak var whiteCardContent: UILabel!
-    @IBOutlet weak var card1: UIButton!
-    
-    
-    
     //VARIABLES: used within view
     var cards = Cards()
-    
-    
-    //PLAYGROUNG VARIABLES
     var selectedWhiteCard = String()
+
+    //PLAYGROUNG VARIABLES
+    // TEMP VARIABLES: to log results from button click
+    @IBOutlet weak var pickedCardText: UILabel!
+    @IBOutlet weak var pickedCardTag: UILabel!
     
     //TO DO: a function to capitalize white cards
     override func viewDidLoad() {
@@ -49,20 +44,32 @@ class GameVC: UIViewController {
                     "Pictures of Boobs"
                 ]
             )
+        
         dealCards()
     }
-    
-    //FUNCTION: Generate Cards
+
     func dealCards () {
         blackCard.text = cards.blackCardContent
+        
         for i in 0..<whiteCards.count{
             whiteCards[i].setTitle(
                 cards.whiteCardsContent[i],
                 for: UIControlState.normal
             )
+            
+        whiteCards[i].tag = i + 1
+        whiteCards[i].addTarget(self, action: #selector(self.Hicard1), for: UIControlEvents.touchUpInside)
         }
     }
     
+    //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
+     func Hicard1(_ sender: UIButton!) {
+        print(sender.tag)
+        pickedCardText.text = "I am the picked card tag: \(sender.tag)"
+        pickedCardText.text = "I am the picked card tag: \(sender.currentTitle)"
+        selectedWhiteCard = sender.currentTitle!
+    }
+
     // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let voteVC : VoteVC = segue.destination as! VoteVC
@@ -75,18 +82,9 @@ class GameVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
-    @IBAction func Hicard1(_ sender: UIButton) {
-        originalTag.text = "I am original: \(sender.tag)"
-        sender.tag = 3
-        tagInfo.text = "I should change: \(sender.tag)"
-        let selectedCard = card1.currentTitle
-        whiteCardContent.text = selectedCard
-        selectedWhiteCard = selectedCard!
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 // END OF CLASS: GameVC
 }

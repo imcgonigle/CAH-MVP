@@ -26,7 +26,6 @@ class VoteVC: UIViewController {
         view.backgroundColor = UIColor.black
         blackCard.text = blackCardContent
         Player1Card.setTitle(player1CardContent, for: UIControlState.normal)
-        
     }
     
     // FUNCTION: Send data thru segue
