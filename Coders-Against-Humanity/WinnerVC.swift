@@ -10,12 +10,21 @@ import UIKit
 
 class WinnerVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
+    @IBOutlet weak var whiteCard: UITextView!
+    @IBOutlet weak var numOfVotes: UILabel!
     
-    var blackCardContent = String()
-
+    var blackCardContent : String!
+    var whiteCardContent : String!
+    var voteCount : Int!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         blackCard.text = blackCardContent
+        whiteCard.text = whiteCardContent
+        let voteCountString = "\(voteCount)"
+        numOfVotes.text = voteCountString
+        
     }
 
     override func didReceiveMemoryWarning() {

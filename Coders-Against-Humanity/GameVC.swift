@@ -18,12 +18,20 @@ struct Cards {
 class GameVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
     @IBOutlet var whiteCards: [UIButton]!
+    
+    @IBOutlet weak var originalTag: UILabel!
     @IBOutlet weak var tagInfo: UILabel!
-
+    @IBOutlet weak var whiteCardContent: UILabel!
+    @IBOutlet weak var card1: UIButton!
+    
+    
+    
     //VARIABLES: used within view
     var cards = Cards()
-    var selectedWhiteCard = String()
     
+    
+    //PLAYGROUNG VARIABLES
+    var selectedWhiteCard = String()
     
     //TO DO: a function to capitalize white cards
     override func viewDidLoad() {
@@ -43,10 +51,6 @@ class GameVC: UIViewController {
             )
         dealCards()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     //FUNCTION: Generate Cards
     func dealCards () {
@@ -59,10 +63,11 @@ class GameVC: UIViewController {
         }
     }
     
-    // FUNCTION: Send blackCard.text thru to VoteVC
+    // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let voteVC : VoteVC = segue.destination as! VoteVC
         voteVC.blackCardContent = cards.blackCardContent
+        voteVC.player1CardContent = selectedWhiteCard
     }
     
     //ACTION: Return to login page
@@ -70,9 +75,18 @@ class GameVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
     @IBAction func Hicard1(_ sender: UIButton) {
-        tagInfo.text = "I am sender: \(sender.tag)"
+        originalTag.text = "I am original: \(sender.tag)"
+        sender.tag = 3
+        tagInfo.text = "I should change: \(sender.tag)"
+        let selectedCard = card1.currentTitle
+        whiteCardContent.text = selectedCard
+        selectedWhiteCard = selectedCard!
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 // END OF CLASS: GameVC
 }

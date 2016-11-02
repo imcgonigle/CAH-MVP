@@ -9,31 +9,42 @@
 import UIKit
 
 class VoteVC: UIViewController {
-    //VARIABLE: blackCard Text via segue
-    @IBOutlet weak var blackCard: UITextView!
     
-    var blackCardContent = String()
+    // VARIABLES: blackCard Text via segue
+    @IBOutlet weak var blackCard: UITextView!
+    var blackCardContent : String!
+
+    
+    // PLAYGROUND: manipulating whitecard data
+    @IBOutlet weak var Player1Card: UIButton!
+    @IBOutlet weak var displayP1vCount: UILabel!
+    var player1CardContent : String!
+    var votesForPlayer1 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
         blackCard.text = blackCardContent
+        Player1Card.setTitle(player1CardContent, for: UIControlState.normal)
         
-//        // ACTION: dyn label
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-//        label.center = CGPoint(x: 160, y: 285)
-//        label.textAlignment = .center
-//        label.text = blackCardContent
-//        self.view.addSubview(label)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
+    
+    // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let winnerVC : WinnerVC = segue.destination as! WinnerVC
         winnerVC.blackCardContent = blackCardContent
+        winnerVC.whiteCardContent = player1CardContent
+        winnerVC.voteCount = votesForPlayer1
+    }
+    
+    //PLAYGROUND ACTION: capturing votes
+    @IBAction func VotedPlayer1(_ sender: UIButton) {
+        votesForPlayer1 += 1
+        displayP1vCount.text = "\(votesForPlayer1)"
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
 // END OF CLASS: VoteVC
