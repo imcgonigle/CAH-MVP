@@ -18,6 +18,7 @@ struct Cards {
 class GameVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
     @IBOutlet var whiteCards: [UIButton]!
+    @IBOutlet weak var tagInfo: UILabel!
 
     //VARIABLES: used within view
     var cards = Cards()
@@ -60,7 +61,6 @@ class GameVC: UIViewController {
     
     // FUNCTION: Send blackCard.text thru to VoteVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        NSLog("\(cards.blackCardContent)")
         let voteVC : VoteVC = segue.destination as! VoteVC
         voteVC.blackCardContent = cards.blackCardContent
     }
@@ -69,6 +69,10 @@ class GameVC: UIViewController {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func Hicard1(_ sender: UIButton) {
+        tagInfo.text = "I am sender: \(sender.tag)"
+    }
+    
 // END OF CLASS: GameVC
 }
