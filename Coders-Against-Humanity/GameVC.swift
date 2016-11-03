@@ -63,13 +63,14 @@ class GameVC: UIViewController {
     
     //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
      func Hicard1(_ sender: UIButton!) {
-        let formattedtag = "\(sender.tag)"
-        pickedCardTag.text = formattedtag
-        pickedCardText.text = sender.currentTitle
+//        let formattedtag = "\(sender.tag)"
+//        pickedCardTag.text = formattedtag
+//        pickedCardText.text = sender.currentTitle
         selectedWhiteCard = sender.currentTitle!
     }
     
     func dealBlackCard() {
+        print(blackCardsArray)
         selectedBlackCard = blackCardsArray[blackCounter]
         blackCounter += 1
     }
@@ -82,6 +83,8 @@ class GameVC: UIViewController {
         }
         selectedWhiteCards = whiteCards
     }
+    
+    
     // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let voteVC : VoteVC = segue.destination as! VoteVC

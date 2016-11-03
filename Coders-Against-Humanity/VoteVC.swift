@@ -23,7 +23,6 @@ class VoteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.black
         blackCard.text = blackCardContent
         Player1Card.setTitle(player1CardContent, for: UIControlState.normal)
     }
