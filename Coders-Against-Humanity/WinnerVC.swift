@@ -37,7 +37,6 @@ class WinnerVC: UIViewController {
         var blackCardSplit = blackCard.components(separatedBy: "_")
         if blackCardSplit.count > 1 {
             finalCardContent = blackCardSplit.joined(separator: whiteCard)
-//            print(finalCardContent)
         }
         else {
             finalCardContent = blackCardSplit[0] + " " + whiteCard
