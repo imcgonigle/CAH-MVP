@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 class WinnerVC: UIViewController {
-    @IBOutlet weak var blackCard: UITextView!
-    @IBOutlet weak var whiteCard: UITextView!
-    @IBOutlet weak var numOfVotes: UILabel!
     
-    var blackCardContent : String!
-    var whiteCardContent : String!
+    @IBOutlet weak var blackCard: UITextView!
+    @IBOutlet weak var numOfVotes: UILabel!
+    @IBOutlet weak var winner: UILabel!
+    
+    var blackCardContent = Information.Cards.currentBlackCard
+    var whiteCardContent = Information.Cards.selectedWhiteCard
     var voteCount : Int!
     var finalCardContent: String!
     
@@ -25,6 +26,7 @@ class WinnerVC: UIViewController {
         numOfVotes.text = voteCountString
         winnerCard(whiteCard: whiteCardContent, blackCard: blackCardContent)
         blackCard.text = finalCardContent
+        winner.text = Information.Player.name + " Wins!"
     }
 
     override func didReceiveMemoryWarning() {

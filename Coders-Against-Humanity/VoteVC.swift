@@ -10,15 +10,17 @@ import UIKit
 
 class VoteVC: UIViewController {
     
+    
     // VARIABLES: blackCard Text via segue
     @IBOutlet weak var blackCard: UITextView!
-    var blackCardContent : String!
+    var blackCardContent = Information.Cards.currentBlackCard
+    var didVote = false
 
     
     // PLAYGROUND: manipulating whitecard data
     @IBOutlet weak var Player1Card: UIButton!
     @IBOutlet weak var displayP1vCount: UILabel!
-    var player1CardContent : String!
+    var player1CardContent = Information.Cards.selectedWhiteCard
     var votesForPlayer1 = Int()
     
     override func viewDidLoad() {
@@ -27,18 +29,17 @@ class VoteVC: UIViewController {
         Player1Card.setTitle(player1CardContent, for: UIControlState.normal)
     }
     
-    // FUNCTION: Send data thru segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let winnerVC : WinnerVC = segue.destination as! WinnerVC
-        winnerVC.blackCardContent = blackCardContent
-        winnerVC.whiteCardContent = player1CardContent
-        winnerVC.voteCount = votesForPlayer1
-    }
+    
     
     //PLAYGROUND ACTION: capturing votes
     @IBAction func VotedPlayer1(_ sender: UIButton) {
-        votesForPlayer1 += 1
-        displayP1vCount.text = "\(votesForPlayer1)"
+        if didVote == false {
+            votesForPlayer1 += 1
+            displayP1vCount.text = "\(votesForPlayer1)"
+            didVote = true
+        }
+        performSegue(withIdentifier: "WinnerSegue", sender: sender)
+        
     }
     
     override func didReceiveMemoryWarning() {

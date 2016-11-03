@@ -21,13 +21,6 @@ class GameVC: UIViewController {
     
     //VARIABLES: used within view
     var cards = Cards()
-    var selectedWhiteCard = String()
-    var blackCardsArray = [String]()
-    var whiteCardsArray = [String]()
-    var selectedBlackCard = String()
-    var selectedWhiteCards = [String]()
-    var blackCounter = Int()
-    var whiteCounter = Int()
     
     //PLAYGROUNG VARIABLES
     // TEMP VARIABLES: to log results from button click
@@ -42,14 +35,13 @@ class GameVC: UIViewController {
         //Injecting in black & white card text
         cards = 
             Cards(
-                blackCardContent: selectedBlackCard,
-                whiteCardsContent: selectedWhiteCards
+                blackCardContent: Information.Cards.currentBlackCard,
+                whiteCardsContent: Information.Cards.playersCards
             )
-        dealCards()
-        print("IN GAME VC", whiteCardsArray)
+        displayCards()
     }
 
-    func dealCards () {
+    func displayCards () {
         blackCard.text = cards.blackCardContent
         
         for i in 0..<whiteCards.count{
@@ -64,32 +56,37 @@ class GameVC: UIViewController {
     }
     
     //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
-     func addIBAction(_ sender: UIButton!) {
-        selectedWhiteCard = sender.currentTitle!
+    func addIBAction(_ sender: UIButton!) {
+        Information.Cards.selectedWhiteCard = sender.currentTitle!
+        if let index = Information.Cards.playersCards.index(of: sender.currentTitle!) {
+            Information.Cards.playersCards.remove(at: index)
+        }
         performSegue(withIdentifier: "VoteSegue", sender: sender)
     }
     
     func dealBlackCard() {
-        print(blackCardsArray)
-        selectedBlackCard = blackCardsArray[blackCounter]
-        blackCounter += 1
+        Information.Cards.currentBlackCard = Information.Cards.blackCards[Information.Cards.blackCounter]
+        Information.Cards.blackCounter += 1
     }
 
     func dealWhiteCards() {
-        var whiteCards = [String]()
-        for _ in 0...6{
-            whiteCards.append(whiteCardsArray[whiteCounter])
-            whiteCounter += 1
+        var nextCard = String()
+        
+        if Information.Cards.playersCards.count == 0 {
+            var whiteCards = [String]()
+            for _ in 0...6{
+                nextCard = Information.Cards.whiteCards[Information.Cards.whiteCounter]
+                whiteCards.append(nextCard)
+                Information.Cards.whiteCounter += 1
+            }
+            Information.Cards.playersCards = whiteCards
+        } else {
+            nextCard = Information.Cards.whiteCards[Information.Cards.whiteCounter]
+            Information.Cards.playersCards.append(nextCard)
+            Information.Cards.whiteCounter += 1
         }
-        selectedWhiteCards = whiteCards
-    }
-    
-    
-    // FUNCTION: Send data thru segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let voteVC : VoteVC = segue.destination as! VoteVC
-        voteVC.blackCardContent = cards.blackCardContent
-        voteVC.player1CardContent = selectedWhiteCard
+        
+        
     }
     
     //ACTION: Return to login page
