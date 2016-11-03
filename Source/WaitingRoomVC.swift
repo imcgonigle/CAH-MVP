@@ -19,7 +19,6 @@ class WaitingRoomVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.black
         loadCards(apiUrl: apiUrl, callback: addToDeckCallback)
     }
     

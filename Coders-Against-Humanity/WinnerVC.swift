@@ -5,7 +5,7 @@
 //  Created by ThunderWhatever on 11/1/16.
 //  Copyright © 2016 ThunderWhatever. All rights
 //
-
+import Foundation
 import UIKit
 
 class WinnerVC: UIViewController {
@@ -16,18 +16,33 @@ class WinnerVC: UIViewController {
     var blackCardContent : String!
     var whiteCardContent : String!
     var voteCount : Int!
+    var finalCardContent: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        blackCard.text = blackCardContent
-        whiteCard.text = whiteCardContent
         let voteCountString = "\(voteCount)"
         numOfVotes.text = voteCountString
-        
+        winnerCard(whiteCard: whiteCardContent, blackCard: blackCardContent)
+        blackCard.text = finalCardContent
+        whiteCard.text = finalCardContent
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func winnerCard(whiteCard: String, blackCard: String) {
+    
+        var blackCardSplit = blackCard.components(separatedBy: "_")
+        if blackCardSplit.count > 1 {
+            finalCardContent = blackCardSplit.joined(separator: whiteCard)
+//            print(finalCardContent)
+        }
+        else {
+            finalCardContent = blackCardSplit[0] + " " + whiteCard
+        }
+        
     }
 
 // END OF CLASS: LoginVC
