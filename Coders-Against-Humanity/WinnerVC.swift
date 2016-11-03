@@ -25,7 +25,6 @@ class WinnerVC: UIViewController {
         numOfVotes.text = voteCountString
         winnerCard(whiteCard: whiteCardContent, blackCard: blackCardContent)
         blackCard.text = finalCardContent
-        whiteCard.text = finalCardContent
     }
 
     override func didReceiveMemoryWarning() {
