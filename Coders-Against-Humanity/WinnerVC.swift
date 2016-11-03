@@ -17,7 +17,6 @@ class WinnerVC: UIViewController {
     var whiteCardContent : String!
     var voteCount : Int!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         blackCard.text = blackCardContent

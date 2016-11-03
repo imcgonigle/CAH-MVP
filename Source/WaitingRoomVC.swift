@@ -12,9 +12,8 @@ import SwiftyJSON
 import Alamofire
 
 class WaitingRoomVC: UIViewController {
-    
+    // VARIABLES: To hold data returned from API
     let apiUrl = "https://jsonagainsthumanity.herokuapp.com/"
-    
     var blackCards = [String]()
     var whiteCards = [String]()
     
@@ -24,15 +23,8 @@ class WaitingRoomVC: UIViewController {
         loadCards(apiUrl: apiUrl, callback: addToDeckCallback)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-//        print(self.blackCards)
-    }
-
-    
     func addToDeckCallback(JSONData : Data){
-        
         let json = SwiftyJSON.JSON(data: JSONData)
-        
         for i in 0..<json["blackCards"].count {
             
             var card = json["blackCards"][i]
@@ -41,26 +33,19 @@ class WaitingRoomVC: UIViewController {
             if card["pick"] == 1 {
                 self.blackCards.append(text!)
             }
-            
         }
-        
         for i in 0..<json["whiteCards"].count {
             
             let text = json["whiteCards"][i].string
             self.whiteCards.append(text!)
-            
         }
-        
-    } //end of addToDeck
+    }
     
-    //MARK: ACTIONS
- 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let gameVC : GameVC = segue.destination as! GameVC
         gameVC.blackCardsArray = blackCards
         gameVC.whiteCardsArray = whiteCards
     }
-    
 }
 
 

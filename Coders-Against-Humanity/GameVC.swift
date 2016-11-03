@@ -37,31 +37,25 @@ class GameVC: UIViewController {
     //TO DO: a function to capitalize white cards
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         dealBlackCard()
         dealWhiteCards()
-        
         //Injecting in black & white card text
         cards = 
             Cards(
                 blackCardContent: selectedBlackCard,
                 whiteCardsContent: selectedWhiteCards
             )
-        
         dealCards()
-        
-        print("IN GAME VC", blackCardsArray)
+        print("IN GAME VC", whiteCardsArray)
     }
 
     func dealCards () {
         blackCard.text = cards.blackCardContent
-        
         for i in 0..<whiteCards.count{
             whiteCards[i].setTitle(
                 cards.whiteCardsContent[i],
                 for: UIControlState.normal
             )
-            
         whiteCards[i].tag = i + 1
         whiteCards[i].addTarget(self, action: #selector(self.Hicard1), for: UIControlEvents.touchUpInside)
         }
@@ -82,14 +76,11 @@ class GameVC: UIViewController {
 
     func dealWhiteCards() {
         var whiteCards = [String]()
-        
         for _ in 0...6{
             whiteCards.append(whiteCardsArray[whiteCounter])
             whiteCounter += 1
         }
-        
         selectedWhiteCards = whiteCards
-        
     }
     // FUNCTION: Send data thru segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,8 +97,6 @@ class GameVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
     
 // END OF CLASS: GameVC
 }
