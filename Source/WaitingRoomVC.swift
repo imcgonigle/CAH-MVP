@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import SwiftyJSON
-import Alamofire
 
 class WaitingRoomVC: UIViewController {
     // VARIABLES: To hold data returned from API
@@ -36,6 +35,13 @@ class WaitingRoomVC: UIViewController {
             let text = json["whiteCards"][i].string
             Information.Cards.whiteCards.append(text!)
         }
+    }
+    
+    // MARK: Actions
+    
+    
+    @IBAction func PlayAsBush(_ sender: UIButton) {
+        Information.Players.name = "Bush"
     }
     
     @IBAction func UsernameTextField(_ sender: AnyObject) {

@@ -57,7 +57,6 @@ class GameVC: UIViewController {
         }
     }
     
-    //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
     func addIBAction(_ sender: UIButton!) {
         Information.Cards.selectedWhiteCard = sender.currentTitle!
         Information.Cards.choicesArray.append(sender.currentTitle!)
@@ -68,9 +67,9 @@ class GameVC: UIViewController {
     }
     
     func dealBlackCard() {
-        let randomCardIndex = Int(arc4random_uniform(UInt32(Information.Cards.blackCards.count)))
+        let randomIndex = Int(arc4random_uniform(UInt32(Information.Cards.blackCards.count - 1)))
         
-        Information.Cards.currentBlackCard = Information.Cards.blackCards[randomCardIndex]
+        Information.Cards.currentBlackCard = Information.Cards.blackCards[randomIndex]
         Information.Cards.blackCounter += 1
     }
 
