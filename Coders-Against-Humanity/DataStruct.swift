@@ -18,7 +18,7 @@ struct Information {
     struct Players {
         
         static var name = String()
-        static let otherPlayers = ["Hillary", "Donald", "Gary", "Brobama"]
+        static let otherPlayers = ["Hillary", "Donald", "Brobama"]
         
     }
     

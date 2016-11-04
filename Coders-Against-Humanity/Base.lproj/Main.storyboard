@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -336,24 +335,16 @@ HUMANITY</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-9C-SoO">
-                                <color key="backgroundColor" red="0.095901407301425934" green="0.53608781099319458" blue="0.64505714178085327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="26"/>
-                                <state key="normal" title="KEEP PLAYING">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ElG-2b-aGV" kind="show" id="TGI-52-PmQ"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="BlackCard 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-8m-yeo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="BlackCard 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-8m-yeo">
                                 <frame key="frameInset" minX="16" minY="20" width="343" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toN-zx-X9Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toN-zx-X9Q">
                                 <frame key="frameInset" minX="16" minY="330" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -386,19 +377,20 @@ HUMANITY</string>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-9C-SoO">
+                                <frame key="frameInset" minX="16" minY="566" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.095901407301425934" green="0.53608781099319458" blue="0.64505714178085327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="26"/>
+                                <state key="normal" title="KEEP PLAYING">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ElG-2b-aGV" kind="show" id="TGI-52-PmQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="toN-zx-X9Q" firstAttribute="leading" secondItem="jzS-Cb-iJn" secondAttribute="leadingMargin" id="1KB-WB-aXk"/>
-                            <constraint firstItem="u8c-8m-yeo" firstAttribute="trailing" secondItem="jzS-Cb-iJn" secondAttribute="trailingMargin" id="De3-f3-LUA"/>
-                            <constraint firstItem="aOD-9C-SoO" firstAttribute="leading" secondItem="jzS-Cb-iJn" secondAttribute="leadingMargin" id="JnW-7e-QfL"/>
-                            <constraint firstItem="toN-zx-X9Q" firstAttribute="top" secondItem="u8c-8m-yeo" secondAttribute="bottom" constant="8" id="K9J-il-768"/>
-                            <constraint firstItem="toN-zx-X9Q" firstAttribute="trailing" secondItem="jzS-Cb-iJn" secondAttribute="trailingMargin" id="M45-f1-mXN"/>
-                            <constraint firstItem="u8c-8m-yeo" firstAttribute="top" secondItem="Lbq-lr-1xB" secondAttribute="bottom" id="Rtf-Qq-W0a"/>
-                            <constraint firstItem="W5d-s4-Pcp" firstAttribute="top" secondItem="aOD-9C-SoO" secondAttribute="bottom" constant="26" id="bpA-n5-40U"/>
-                            <constraint firstItem="aOD-9C-SoO" firstAttribute="trailing" secondItem="jzS-Cb-iJn" secondAttribute="trailingMargin" id="nMN-2l-KHS"/>
-                            <constraint firstItem="u8c-8m-yeo" firstAttribute="leading" secondItem="jzS-Cb-iJn" secondAttribute="leadingMargin" id="xxe-m8-VQU"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="blackCard" destination="u8c-8m-yeo" id="iYS-Ea-hzf"/>
@@ -458,6 +450,6 @@ A random black card will be drawn to play on. You will be given 6 randomly selec
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TGI-52-PmQ"/>
+        <segue reference="dRC-aZ-IYy"/>
     </inferredMetricsTieBreakers>
 </document>
