@@ -40,7 +40,7 @@ class WaitingRoomVC: UIViewController {
     
     @IBAction func UsernameTextField(_ sender: AnyObject) {
         print("text: " + sender.text )
-        Information.Player.name = sender.text
+        Information.Players.name = sender.text
         self.view.endEditing(true)
         performSegue(withIdentifier: "GameViewSegue", sender: sender)
     }

@@ -16,6 +16,7 @@ struct Cards {
 
 // CLASS: GAME VC
 class GameVC: UIViewController {
+    
     @IBOutlet weak var blackCard: UITextView!
     @IBOutlet var whiteCards: [UIButton]!
     
@@ -32,6 +33,7 @@ class GameVC: UIViewController {
         super.viewDidLoad()
         dealBlackCard()
         dealWhiteCards()
+        pickRandomCards()
         //Injecting in black & white card text
         cards = 
             Cards(
@@ -58,6 +60,7 @@ class GameVC: UIViewController {
     //PLAYGROUND: to see what i can do with UIBUTTON arg and .tag property
     func addIBAction(_ sender: UIButton!) {
         Information.Cards.selectedWhiteCard = sender.currentTitle!
+        Information.Cards.choicesArray.append(sender.currentTitle!)
         if let index = Information.Cards.playersCards.index(of: sender.currentTitle!) {
             Information.Cards.playersCards.remove(at: index)
         }
@@ -65,28 +68,49 @@ class GameVC: UIViewController {
     }
     
     func dealBlackCard() {
-        Information.Cards.currentBlackCard = Information.Cards.blackCards[Information.Cards.blackCounter]
+        let randomCardIndex = Int(arc4random_uniform(UInt32(Information.Cards.blackCards.count)))
+        
+        Information.Cards.currentBlackCard = Information.Cards.blackCards[randomCardIndex]
         Information.Cards.blackCounter += 1
     }
 
     func dealWhiteCards() {
+        
         var nextCard = String()
+        var randomCardIndex = Int()
         
         if Information.Cards.playersCards.count == 0 {
             var whiteCards = [String]()
             for _ in 0...6{
-                nextCard = Information.Cards.whiteCards[Information.Cards.whiteCounter]
+                randomCardIndex = Int(arc4random_uniform(UInt32(Information.Cards.whiteCards.count)))
+                nextCard = Information.Cards.whiteCards[randomCardIndex]
                 whiteCards.append(nextCard)
                 Information.Cards.whiteCounter += 1
             }
             Information.Cards.playersCards = whiteCards
         } else {
-            nextCard = Information.Cards.whiteCards[Information.Cards.whiteCounter]
+            randomCardIndex = Int(arc4random_uniform(UInt32(Information.Cards.whiteCards.count)))
+            nextCard = Information.Cards.whiteCards[randomCardIndex]
             Information.Cards.playersCards.append(nextCard)
             Information.Cards.whiteCounter += 1
         }
         
         
+    }
+    
+    func pickRandomCards() {
+        
+        var nextCard = String()
+        var randomCardIndex = Int()
+        var cardArray = [String]()
+        
+        for _ in 1...3 {
+            randomCardIndex = Int(arc4random_uniform(UInt32(Information.Cards.whiteCards.count)))
+            nextCard = Information.Cards.whiteCards[randomCardIndex]
+            cardArray.append(nextCard)
+        }
+        
+        Information.Cards.choicesArray = cardArray
     }
     
     //ACTION: Return to login page

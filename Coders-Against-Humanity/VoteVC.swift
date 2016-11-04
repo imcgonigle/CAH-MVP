@@ -15,6 +15,12 @@ class VoteVC: UIViewController {
     @IBOutlet weak var blackCard: UITextView!
     var blackCardContent = Information.Cards.currentBlackCard
     var didVote = false
+    
+    @IBOutlet weak var RandomCard1: UIButton!
+    @IBOutlet weak var RandomCard2: UIButton!
+    @IBOutlet weak var RandomCard3: UIButton!
+
+    
 
     
     // PLAYGROUND: manipulating whitecard data
@@ -26,7 +32,10 @@ class VoteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         blackCard.text = blackCardContent
-        Player1Card.setTitle(player1CardContent, for: UIControlState.normal)
+        RandomCard1.setTitle(Information.Cards.choicesArray[0], for: UIControlState.normal)
+        RandomCard2.setTitle(Information.Cards.choicesArray[1], for: UIControlState.normal)
+        RandomCard3.setTitle(Information.Cards.choicesArray[2], for: UIControlState.normal)
+        Player1Card.setTitle(Information.Cards.choicesArray[3], for: UIControlState.normal)
     }
     
     
@@ -35,8 +44,14 @@ class VoteVC: UIViewController {
     @IBAction func VotedPlayer1(_ sender: UIButton) {
         if didVote == false {
             votesForPlayer1 += 1
-            displayP1vCount.text = "\(votesForPlayer1)"
             didVote = true
+        }
+        Information.Cards.winningCard = sender.currentTitle!
+        if Information.Cards.selectedWhiteCard == sender.currentTitle {
+            Information.Round.winner = Information.Players.name
+        } else {
+            let randomIndex = Int(arc4random_uniform(UInt32(Information.Players.otherPlayers.count)))
+            Information.Round.winner = Information.Players.otherPlayers[randomIndex]
         }
         performSegue(withIdentifier: "WinnerSegue", sender: sender)
         

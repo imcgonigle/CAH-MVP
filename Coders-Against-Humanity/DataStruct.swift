@@ -8,8 +8,18 @@
 
 struct Information {
     
-    struct Player {
+    struct Scores {
+        static var one = 0
+        static var two = 0
+        static var three = 0
+        static var four = 0
+    }
+    
+    struct Players {
+        
         static var name = String()
+        static let otherPlayers = ["Hillary", "Donald", "Gary", "Brobama"]
+        
     }
     
     struct Cards {
@@ -25,6 +35,17 @@ struct Information {
         static var currentBlackCard = String()
         
         static var selectedWhiteCard = String()
+        
+        static var choicesArray = [String]()
+        
+        static var winningCard = String()
+        
+    }
+    
+    struct Round {
+        
+        static var winner = String()
+        
     }
     
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B410A8BE1DC8FEB200FEB7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8BD1DC8FEB200FEB7AA /* AppDelegate.swift */; };
 		B410A8C01DC8FEB200FEB7AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8BF1DC8FEB200FEB7AA /* LoginVC.swift */; };
-		B410A8C31DC8FEB200FEB7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410A8C11DC8FEB200FEB7AA /* Main.storyboard */; };
+		B410A8C31DC8FEB200FEB7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410A8C11DC8FEB200FEB7AA /* Main.storyboard */; settings = {ASSET_TAGS = (Hillary, ); }; };
 		B410A8C51DC8FEB200FEB7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B410A8C41DC8FEB200FEB7AA /* Assets.xcassets */; };
 		B410A8C81DC8FEB200FEB7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410A8C61DC8FEB200FEB7AA /* LaunchScreen.storyboard */; };
 		B410A8D31DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410A8D21DC8FEB200FEB7AA /* Coders_Against_HumanityTests.swift */; };
@@ -364,6 +364,9 @@
 		B410A8B21DC8FEB200FEB7AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Hillary,
+				);
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Ji;
